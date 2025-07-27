@@ -1,0 +1,89 @@
+程式1：
+openapi: 3.0.0
+info:
+  title: Action API
+  description: API to handle different actions based on user input phrases.
+  version: 1.0.0
+servers:
+  - url: https://www.oceaniot.com.tw/GPTs/002_switch.php
+    description: Main (production) server
+paths:
+  /action:
+    get:
+      operationId: handlePhrase
+      summary: Handles different actions based on user input phrases.
+      parameters:
+        - name: phrase
+          in: query
+          required: true
+          schema:
+            type: string
+            enum: ["燈打開","燈關掉","門打開"]
+            description: User input phrase to determine the action.
+
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: The response message based on the input phrase.
+                  apiResponse:
+                    type: string
+                    description: The content fetched from the external API.
+                required:
+                  - message
+                  - apiResponse
+                example:
+                  message: "Content fetched successfully"
+                  apiResponse: "<content from the external API>"
+
+
+
+程式2：
+openapi: 3.0.0
+info:
+  title: Action API
+  description: API to handle different actions based on user input phrases.
+  version: 1.0.0
+servers:
+  - url: https://teach.oceaniot.com.tw/team01/jesse/003_switch.php
+    description: Main (production) server
+paths:
+  /action:
+    get:
+      operationId: handlePhrase
+      summary: Handles different actions based on user input phrases.
+      parameters:
+        - name: phrase
+          in: query
+          required: true
+          schema:
+            type: string
+            enum: ["機台1","機台2","機台3"]
+            description: User input phrase to determine the action.
+
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: The response message based on the input phrase.
+                  apiResponse:
+                    type: string
+                    description: The content fetched from the external API.
+                required:
+                  - message
+                  - apiResponse
+                example:
+                  message: "Content fetched successfully"
+                  apiResponse: "<content from the external API>"
