@@ -5,7 +5,7 @@ info:
   description: API to handle different actions based on user input phrases.
   version: 1.0.0
 servers:
-  - url: https://www.oceaniot.com.tw/GPTs/002_switch.php
+
     description: Main (production) server
 paths:
   /action:
@@ -51,7 +51,7 @@ info:
   description: API to handle different actions based on user input phrases.
   version: 1.0.0
 servers:
-  - url: https://teach.oceaniot.com.tw/team01/jesse/003_switch.php
+
     description: Main (production) server
 paths:
   /action:
