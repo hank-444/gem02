@@ -23,9 +23,9 @@ $phrase_num=2;
 if(strpos($phrase,"門打開") !== false){ 
 $phrase_num=3;
 }
-}
 if(strpos($phrase,"機台1") !== false){ 
 $phrase_num=4;
+}
 //$response = $phrase;
 
 switch ($phrase_num) {
