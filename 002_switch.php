@@ -23,6 +23,9 @@ $phrase_num=2;
 if(strpos($phrase,"門打開") !== false){ 
 $phrase_num=3;
 }
+}
+if(strpos($phrase,"機台1") !== false){ 
+$phrase_num=4;
 //$response = $phrase;
 
 switch ($phrase_num) {
@@ -37,6 +40,9 @@ switch ($phrase_num) {
 	case 3:
 		$response = "已經將辦公室的大門打開";
         break;
+	case 4:
+		$response = "機台1壞了";
+        break;	
 
     default:
         //$response['error'] = 'Invalid phrase parameter';
